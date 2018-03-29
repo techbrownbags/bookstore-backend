@@ -9,7 +9,6 @@ module AdminAuthorizable
 
   def authorize!(action)
     raise NotPermittedException if action != :read && !current_user.admin?
-    raise NotPermittedException if false
     true
   end
 end

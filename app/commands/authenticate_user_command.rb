@@ -29,7 +29,8 @@ class AuthenticateUserCommand < BaseCommand
         user_id: user.id,
         email: user.email,
         admin: user.admin,
-        exp: 24.hours.from_now.to_i
+        exp: 45.seconds.from_now.to_i
+        # exp: 24.hours.from_now.to_i
     }
   end
 end
