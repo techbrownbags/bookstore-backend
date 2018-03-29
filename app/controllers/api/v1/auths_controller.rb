@@ -1,7 +1,6 @@
 module Api
   module V1
     class AuthsController < ApplicationController
-      include TokenAuthenticatable
 
       skip_before_action :authenticate_user
 

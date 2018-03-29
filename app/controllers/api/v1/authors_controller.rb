@@ -1,7 +1,6 @@
 module Api
 module V1
 class AuthorsController < ApplicationController
-  include TokenAuthenticatable
 
   before_action :set_author, only: [:show, :update, :destroy]
 
@@ -15,11 +14,13 @@ class AuthorsController < ApplicationController
 
   # GET /authors/1
   def show
+    authorize! :details
     render json: @author
   end
 
   # POST /authors
   def create
+    authorize! :create
     @author = Author.new(author_params)
 
     if @author.save
@@ -31,6 +32,7 @@ class AuthorsController < ApplicationController
 
   # PATCH/PUT /authors/1
   def update
+    authorize! :update
     if @author.update(author_params)
       render json: @author
     else
@@ -40,6 +42,7 @@ class AuthorsController < ApplicationController
 
   # DELETE /authors/1
   def destroy
+    authorize! :delete
     @author.destroy
   end
 

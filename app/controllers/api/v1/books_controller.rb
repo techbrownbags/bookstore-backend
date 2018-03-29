@@ -1,8 +1,6 @@
 module Api
 module V1
 class BooksController < ApplicationController
-  include TokenAuthenticatable
-
   before_action :set_author, only: [:index, :show, :update, :destroy]
   before_action :set_book, only: [:show, :update, :destroy]
 
