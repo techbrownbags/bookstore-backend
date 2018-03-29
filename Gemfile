@@ -16,7 +16,8 @@ gem 'puma', '~> 3.7'
 # gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt'
+gem 'jwt', '1.5.6'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
@@ -25,11 +26,21 @@ gem 'rack-cors'
 
 # MONEY
 gem 'money-rails'
+gem 'nokogiri', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'database_cleaner'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'pry-rails'
+  gem 'rspec-rails'
+  gem 'shoulda-matchers'
 end
-
+group :test do
+  gem 'codeclimate-test-reporter', '~> 1.0.0'
+  gem 'simplecov'
+end
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
 end
