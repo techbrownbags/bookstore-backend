@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      resource :auth, only: %i[create]
       resources :authors do
         resources :books
       end
@@ -11,6 +12,6 @@ Rails.application.routes.draw do
     end
     end
   end
-  root to: 'authors#index'
+  # root to: 'authors#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

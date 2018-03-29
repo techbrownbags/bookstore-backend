@@ -1,0 +1,1 @@
+PGPASSWORD=our-awesome-bookstore-app psql -h localhost -d bookstore-backend_development -Upostgres
