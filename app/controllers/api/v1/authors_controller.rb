@@ -1,6 +1,8 @@
 module Api
 module V1
 class AuthorsController < ApplicationController
+  include TokenAuthenticatable
+
   before_action :set_author, only: [:show, :update, :destroy]
 
   # GET /authors

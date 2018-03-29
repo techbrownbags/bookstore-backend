@@ -32,4 +32,4 @@
 en:
   hello: "Hello world"
   authenticate_user_command:
-    invalid_credentials: 'credentials are invalid, homey'
+    invalid_credentials: 'credentials are invalid'
