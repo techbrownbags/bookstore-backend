@@ -4,7 +4,7 @@ describe JwtService do
   subject { described_class }
 
   let(:payload) { { 'one' => 'two' } }
-  let(:token) { 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvbmUiOiJ0d28ifQ.VcHxBxg0HvXodGnNJxYvOodEaOTcB3_szy65osW4edw' }
+  let(:token) { 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJvbmUiOiJ0d28ifQ.aYYqP5H6hnFGbHzSRjar7f5a8RitqSeMsmstYSbIAf0'}
 
   describe '.encode' do
     it { expect(subject.encode(payload)).to eq(token) }
