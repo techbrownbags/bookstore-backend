@@ -7,6 +7,7 @@ class AuthorsController < ApplicationController
 
   # GET /authors
   def index
+    authorize! :read
     @authors = Author.all
 
     render json: @authors
